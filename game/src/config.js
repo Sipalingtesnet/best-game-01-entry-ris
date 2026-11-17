@@ -1,0 +1,50 @@
+// NEON BASTION — shared configuration. Single source of truth for layout, towers, enemies, colors.
+export const CONFIG = {
+  W: 1280,
+  H: 720,
+  HUD_H: 56,
+  BAR_H: 88,
+  CELL: 64,
+  COLS: 20,
+  ROWS: 9,
+  FIELD_X: 0,
+  FIELD_Y: 56,
+  START_CREDITS: 220,
+  START_LIVES: 20,
+  MAX_WAVE: 11,
+  SELL_RATE: 0.7,
+  BOSS_WAVE: 11,
+
+  TOWERS: {
+    pulse: { name: 'Pulse', cost: 50, range: 130, damage: 9, rate: 2.6, color: '#22e6ff', desc: 'Rapid bolts' },
+    frost: { name: 'Frost', cost: 75, range: 120, damage: 5, rate: 1.4, slow: 0.45, slowSecs: 2, color: '#6fb7ff', desc: 'Slows drones' },
+    rail: { name: 'Rail', cost: 120, range: 260, damage: 55, rate: 0.7, color: '#ff4fd8', desc: 'Piercing beam' },
+    mortar: { name: 'Mortar', cost: 150, range: 190, damage: 34, rate: 0.55, splash: 70, color: '#ff9a3d', desc: 'Splash shells' },
+    tesla: { name: 'Tesla', cost: 200, range: 150, damage: 22, rate: 1.1, chains: 3, color: '#b78cff', desc: 'Chain lightning' },
+  },
+  TOWER_ORDER: ['pulse', 'frost', 'rail', 'mortar', 'tesla'],
+  UPGRADE_COST_MULT: 0.75,
+  UPGRADE_DMG_MULT: 1.5,
+  UPGRADE_RANGE_MULT: 1.15,
+  MAX_LEVEL: 3,
+
+  ENEMIES: {
+    scout: { hp: 30, speed: 70, reward: 8, score: 10, radius: 11, color: '#ff5d5d' },
+    runner: { hp: 18, speed: 125, reward: 9, score: 15, radius: 9, color: '#ffd23d' },
+    tank: { hp: 160, speed: 38, reward: 20, score: 25, radius: 16, color: '#7dff5d' },
+    swarm: { hp: 10, speed: 95, reward: 4, score: 5, radius: 7, color: '#ff8a5d' },
+    boss: { hp: 3200, speed: 26, reward: 500, score: 1000, radius: 30, color: '#ff2d78', lives: 5 },
+  },
+  WAVE_HP_MULT: 1.22,
+  WAVE_COUNT_MULT: 1.12,
+
+  COLORS: {
+    bg: '#05060f',
+    gridLine: 'rgba(90,140,255,0.10)',
+    path: '#0d1530',
+    pathGlow: '#1c2f66',
+    core: '#37ffd0',
+    text: '#d8f6ff',
+    dim: '#7d93c4',
+  },
+};
